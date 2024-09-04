@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gambar</title>
+</head>
+<body>
+    <img src="tmii.webp" id="gambar" alt="" srcset="">
+    <form id="formgambar">
+        <label for="pilihgambar">Ubah :</label>
+        <select name="pilihgambar" id="pilihgambar">
+            <option value="judul" disabled>Pilih Gambar</option>
+            <option value="PPKM Jogja Hari Ini Terbaru Sampai 1 Agustus 2022, Berikut Aturan Baru Kerumunan di Tempat Umum.jpeg">Gambar 1</option>
+            <option value="The Ultimate Lombok Itinerary for 5 Days - Hungariandreamers.jpeg">Gambar 2</option>
+            <option value="gatau.jpeg">Gambar 3</option>
+            </select>
+        <select name="opacity" id="opacity">
+            <option value="judul"disabled>Opasitas</option>
+            <option value="0.2">0.2</option>
+            <option value="0.5">0.5</option>
+            <option value="1">1</option>
+        </select>
+        <button type="submit">kirim</button>
+    </form>
+    
+    <script>
+        const formgambar = document.getElementById('formgambar');
+        const gambar = document.getElementById('gambar');
+
+        formgambar.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const pilihgambarValue = document.getElementById('pilihgambar').value;
+            const opacityValue = document.getElementById('opacity').value;
+
+            gambar.src = pilihgambarValue;
+            gambar.style.opacity = opacityValue;
+        });
+
+    </script>
+</body>
+</html>

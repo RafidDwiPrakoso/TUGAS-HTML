@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="search" name="search" id="search" placeholder="Cari disini...">
+        <button type="submit">Cari</button>
+    </form>
+</body>
+</html>
+
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const search = params.get('search');
+
+        if (search) {
+            const p = document.createElement('p');
+            p.textContent = `Mencari data ${search}....`;
+            document.body.appendChild(p);
+        }
+    </script>
